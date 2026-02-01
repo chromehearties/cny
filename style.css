@@ -125,6 +125,12 @@ h1 {
   line-height: 1.6;
   color:gold;
 }
+.desc-condition {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 12px;
+  color: #ffd36a;
+}
 
 /* ===== DROPDOWNS ===== */
 select {
@@ -213,4 +219,5 @@ select {
     background-attachment: scroll; /* iOS safe */
   }
   
+
 }
