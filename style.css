@@ -1,0 +1,216 @@
+/* ===== RESET ===== */
+
+@font-face {
+  font-family: "OneSmear";
+  src: url("fonts/one-smear.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+}
+/* ===== FULL SCREEN BACKGROUND ===== */
+body {
+  
+  background-image: url("seiheiga.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* parallax effect */
+}
+
+/* ===== PAGE LAYOUT ===== */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.content {
+ width: 100%;
+  max-width: 720px;        /* ⬅️ wider than before */
+  padding: 48px 24px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.deco {
+  display: inline-block;
+  animation: sway 3s ease-in-out infinite;
+}
+
+.deco.left {
+  animation-delay: 0s;
+}
+
+.deco.right {
+  animation-delay: 1.5s;
+}
+
+@keyframes sway {
+  0%   { transform: rotate(0deg) translateY(0); }
+  50%  { transform: rotate(3deg) translateY(-4px); }
+  100% { transform: rotate(0deg) translateY(0); }
+
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin: 0 auto;
+
+  /* lock centering */
+  text-align: center;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+  font-family: "OneSmear", "Poppins", system-ui, sans-serif;
+  font-size: 4rem;
+  letter-spacing: 1.7px;
+  color: #ffd36a;
+
+
+  /* poster-style depth */
+  text-shadow:
+    0 3px 0 #b8860b,
+    0 6px 12px rgba(0,0,0,0.5);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+/* ===== INTRO ===== */
+.intro {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 48px;
+  color:gold;
+  max-width: 520px;   /* controls line length */
+  margin: 0 auto 48px auto;
+   
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  max-width: 700px;
+  margin: 0 auto 48px auto;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffe39c;
+  margin-bottom: 8px;
+  font-family: "OneSmear", "Poppins", system-ui, sans-serif;
+}
+
+.desc {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color:gold;
+}
+
+/* ===== DROPDOWNS ===== */
+select {
+  width: 100%;
+  max-width: 420px;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== LIST ===== */
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: #ffe39c;
+}
+
+.list li {
+  padding: 6px 0;
+  color: #ffe39c;
+}
+.list.numbered {
+  
+  padding-left: 20px;
+}
+
+.list.numbered li {
+  padding: 4px 0;
+}
+
+/* Center align all section content */
+.section,
+.section-title,
+.section p,
+.section ul,
+.section ol,
+.section select {
+  text-align: center;
+}
+.section ul,
+.section ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.scroll-panel {
+  width: min(90%, 780px);
+  margin: 64px auto;
+  padding: 56px 40px;
+
+  background: linear-gradient(
+    180deg,
+    #b31212 0%,
+    #a60f0f 100%
+  );
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35),
+    inset 0 0 0 2px rgba(255,215,120,0.25);
+
+  color: #ffd36a;
+}
+
+
+
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: 64px;
+  text-align: center;
+  font-size: 0.5rem;
+  opacity: 0.95;
+  color: #ffe39c;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  body {
+    text-align: center !important;
+    background-image: url("seiheiga.png");
+    background-position: center top;
+    background-attachment: scroll; /* iOS safe */
+  }
+  
+}
