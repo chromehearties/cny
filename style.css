@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "OneSmear";
-  src: url("fonts/one-smear.ttf") format("truetype");
+  src: url("one-smear.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -221,3 +221,4 @@ select {
   
 
 }
+
